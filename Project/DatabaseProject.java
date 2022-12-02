@@ -668,7 +668,7 @@ public class DatabaseProject {
 
     public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Welcome to NEAs Exploration Mission Design System!");
+		System.out.println("Welcome to sales system!");
 
 		while (true) {
 			try {
