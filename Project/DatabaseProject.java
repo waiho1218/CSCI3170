@@ -6,7 +6,7 @@ import java.io.*;
 
 public class DatabaseProject {
     final static String driverName = "com.mysql.jdbc.Driver";   
-    final static String dbAddr = "jdbc:mysql://projgw.cse.cuhk.edu.hk:2712/db57?autoReconnect=true&useSSL=false";
+    final static String dbAddr = "jdbc:mysql://projgw.cse.cuhk.edu.hk:2712/Group57?autoReconnect=true&useSSL=false";
     final static String user = "Group57";
     final static String password = "CSCI3170";
     
