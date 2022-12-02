@@ -522,7 +522,7 @@ public class DatabaseProject {
 		}
 
         try {
-			PreparedStatement stmt = db.prepareStatement("INSERT INTO transaction (tID, pID, sID, tDate) VALUES (?,?,?,?)");
+			PreparedStatement stmt = db.prepareStatement("INSERT INTO transaction (tID, pID, sID, tDate) VALUES (?,?,?,STR_TO_DATE(?,'%d/%m/%Y'))");
 			String line;
 			BufferedReader br = new BufferedReader(new FileReader(path + "/transaction.txt"));
 			while ((line = br.readLine()) != null) {
