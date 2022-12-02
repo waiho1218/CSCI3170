@@ -213,8 +213,8 @@ public class DatabaseProject {
 		String searchSQL = "";
 
 
-		searchSQL += "SELECT P.pID, P.pName, M.mName, C.cName, P.pAvailableQuantity, P.pWarrantyPeriod, P.pPrice";
-		searchSQL += "FROM part P , manufacturer M, category C";
+		searchSQL += "SELECT P.pID, P.pName, M.mName, C.cName, P.pAvailableQuantity, P.pWarrantyPeriod, P.pPrice ";
+		searchSQL += "FROM part P , manufacturer M, category C ";
 		searchSQL += "WHERE P.mID = M.mID AND P.cID = C.cID ";
 		
 		while (true) {
