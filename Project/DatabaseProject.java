@@ -328,7 +328,7 @@ public class DatabaseProject {
 				SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 				String dateInStr = sdf.format(cal.getTime());
 
-				stmt = db.prepareStatement("INSERT INTO transaction (tID, pID, sID, tDate) VALUES (?,?,?,?)");
+				stmt = db.prepareStatement("INSERT INTO transaction (tID, pID, sID, tDate) VALUES (?,?,?,STR_TO_DATE(?,'%d/%m/%Y'))");
 				stmt.setInt(1, tID);
 				stmt.setInt(2, Integer.parseInt(pID));
                 stmt.setInt(3, Integer.parseInt(sID));
