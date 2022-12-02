@@ -416,7 +416,7 @@ public class DatabaseProject {
         String transaction_sql = "CREATE TABLE transaction (";
         transaction_sql += "tID INTEGER NOT NULL PRIMARY KEY,";
         transaction_sql += "pID INTEGER NOT NULL,";
-        transaction_sql += "sID INTEGER NOT NULL";
+        transaction_sql += "sID INTEGER NOT NULL,";
         transaction_sql += "tDate DATE NOT NULL)";
 
         System.out.print("Processing...");
