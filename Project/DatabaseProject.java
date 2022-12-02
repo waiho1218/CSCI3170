@@ -317,7 +317,7 @@ public class DatabaseProject {
 				
 				// insert transaction record
 				int tID = 0;
-				stmt = db.prepareStatement("SELECT MAX(T.tID) FROM transaction");
+				stmt = db.prepareStatement("SELECT MAX(T.tID) FROM transaction T");
 				rs = stmt.executeQuery();
 				if (rs.next()){
 					tID = rs.getInt(1);
