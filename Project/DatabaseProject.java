@@ -144,7 +144,7 @@ public class DatabaseProject {
 
 		viewSQL += "CREATE VIEW temp AS ";
 		viewSQL += "SELECT T.pID, COUNT(*) AS numOfTrans ";
-		viewSQL += "FROM transcation T ";
+		viewSQL += "FROM transaction T ";
 		viewSQL += "GROUP BY T.pID ";
 		PreparedStatement stmt = db.prepareStatement(viewSQL);
 		stmt.execute();
