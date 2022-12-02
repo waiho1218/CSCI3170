@@ -5,18 +5,17 @@ import java.sql.*;
 import java.io.*;
 
 public class DatabaseProject {
-    final static String driverName = "com.mysql.jdbc.Driver";   
-    final static String dbAddr = "jdbc:mysql://projgw.cse.cuhk.edu.hk:2712/Group57?autoReconnect=true&useSSL=false";
-    final static String user = "Group57";
-    final static String password = "CSCI3170";
+    public static String dbAddress = "jdbc:mysql://projgw.cse.cuhk.edu.hk:2633/db57?autoReconnect=true&useSSL=false";
+    public static String dbUsername = "Group57";
+    public static String dbPassword = "CSCI3170";
     
 
     public static Connection getConnection() {
         Connection conn = null;
         try {
-            Class.forName(driverName);
+            Class.forName("com.mysql.jdbc.Driver");
             try {
-            	conn = DriverManager.getConnection(dbAddr,user,password);
+            	conn = DriverManager.getConnection(dbAddress,dbUsername,dbPassword);
             } catch (SQLException e) {
                 System.out.println("Failed to connect to database.");
                 System.exit(0);
