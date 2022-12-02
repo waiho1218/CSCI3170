@@ -86,7 +86,7 @@ public class DatabaseProject {
 		System.out.println("| ID | Name | Years of Experience | Number of Transaction |");
 
 		viewSQL += "CREATE VIEW temp AS ";
-	 	viewSQL += "SELECT T.sID, COUNT(*) AS noOfTran";
+	 	viewSQL += "SELECT T.sID, COUNT(*) AS noOfTran ";
 		viewSQL += "FROM transaction T ";
 		viewSQL += "GROUP BY T.sID";
 		PreparedStatement stmt = db.prepareStatement(viewSQL);
@@ -232,7 +232,7 @@ public class DatabaseProject {
 		}
 		
 		while (true) {
-			System.out.print("Type in the search keyword:");
+			System.out.print("Type in the search keyword: ");
 			keyword = scanner.next();
 			if (!keyword.isEmpty())
 				break;
